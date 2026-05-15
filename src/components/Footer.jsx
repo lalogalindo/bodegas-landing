@@ -1,4 +1,5 @@
 import React from 'react';
+import { MercSoftLogo } from '../assets/images';
 
 const Footer = () => {
   return (
@@ -19,8 +20,8 @@ const Footer = () => {
               <a href="#" className="w-10 h-10 bg-white/5 rounded-full flex items-center justify-center hover:bg-accent hover:text-white transition-all">
                 <i className="fab fa-instagram"></i>
               </a>
-              <a 
-                href="https://wa.me/5212441154541?text=Hola!%20Me%20gustaría%20más%20información%20sobre%20las%20bodegas." 
+              <a
+                href="https://wa.me/5212441154541?text=Hola!%20Me%20gustaría%20más%20información%20sobre%20las%20bodegas."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 bg-white/5 rounded-full flex items-center justify-center hover:bg-accent hover:text-white transition-all"
@@ -50,9 +51,14 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="border-t border-white/10 pt-8 flex flex-col md:row justify-between items-center text-slate-500 text-sm">
+        <div className="border-t border-white/10 pt-8 flex flex-col items-center justify-center gap-4 text-slate-500 text-sm text-center">
           <p>© {new Date().getFullYear()} bodegas. Todos los derechos reservados.</p>
-          <p className="mt-4 md:mt-0">Diseñado para impactar.</p>
+          <div className="flex items-center gap-2">
+            <span>Powered by</span>
+            <a href="https://mercsoft.mx" target="_blank" rel="noopener noreferrer" className="inline-block translate-y-[1px]">
+              <img src={MercSoftLogo} alt="Mercsoft" style={{ maxWidth: "80px" }} />
+            </a>
+          </div>
         </div>
       </div>
     </footer>
